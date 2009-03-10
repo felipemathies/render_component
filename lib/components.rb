@@ -107,7 +107,7 @@ module Components
         new_request.instance_variable_set(
           :@parameters,
           (options[:params] || {}).with_indifferent_access.update(
-            "controller" => controller_name, "action" => options[:action], "id" => options[:id]
+            "controller" => options[:controller], "action" => options[:action], "id" => options[:id]
           )
         )
 
